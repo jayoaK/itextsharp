@@ -194,11 +194,10 @@ namespace iTextSharp.text.pdf {
             if (flat) {
                 FlatFields();
             }
-            if (flatFreeText) {
-                FlatFreeTextFields();
-            }
             if (flatannotations) {
                 FlattenAnnotations();
+            } else if (flatFreeText) {
+                FlatFreeTextFields();
             }
             AddFieldResources();
             PdfDictionary catalog = reader.Catalog;
